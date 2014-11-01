@@ -1,0 +1,112 @@
+chipless vs chia-pet
+make a golbal view of the overall signals
+
+
+DNase
+use histone clustering to find some directions
+do the survey carefully to know the status
+plot the heatmap to check individual
+
+
+Faire
+literature review: active promoter coverage
+literature review again!: peak calling methods
+plot signal distribution
+verify the training sets with cross correlation
+purify the data -- align the regions, fix the length. garbage in, garbage out
+study CENTDIST: it's easy to understand and I can learn the flow
+
+
+peak calling of F
+check the overlap with DNase: DnoF, DF, FnoD -- FnoD has low coverage of TF
+
+
+what a phd does:
+define a problem, solve a problem, write down the solution, present it
+
+
+3 types of requirements
+1. computational challenge -- soc
+2. biological features -- paper
+3. program robustness -- tool user
+
+
+random talk
+build a solid base: study the existing methods into the very detail. Learn the structure, think about why only your method works.
+
+
+think
+how to choose the model for fitting
+
+
+Faire -- show the exp results
+set up the experiments properly: same input, same output, same validation
+ex. H1hescFP can beat H1hescUCSC, but can't beat H1hescRep1_Fseq
+
+
+make a confident observation -- boundary info of ATAC
+heatmap of ATAC log(p/m) at the +200 and -200
+
+
+experiment design
+write down the list of experiments and do it one by one
+compare all the combinations
+show in the excel chart
+
+
+research in CS
+0. real-life applications
+1. definition of data storage
+2. definition of the problems in a computational way
+3. developing programs to solve the problems
+4. validate that the solution is meaningful
+
+
+feature testing
+define a positive set, a negative set, input the feature, show the ROC
+
+
+Attention!
+K is not introducing computational problems to you!
+
+
+Think a question not only in a syntax level, but in a semantic level
+
+
+information hidden behind the features
+ex. two identical distributions, one always odd, one always even. -> can't differentiate using distribution
+
+
+
+You're not doing science. You are just considering about graduation.
+Enjoy the process.
+
+
+plot boxplot and histogram together
+
+
+signal processing
+Like FT(time -> frequency), the biological signals may be decomposed into several signals
+
+
+research steps
+	look into the data
+	think of the data generation and make assumptions
+	validate or devalidate the ideas by collecting statistics
+		use fast, simple statistics
+		the features may hide very deep. need to think of a better statistics
+	make simple methods handling the validated ideas
+	apply mathematical models to improve the performance
+
+
+Pile up the fragments
+	pile up 150- seems to have good result
+	In fact, this may be trivial: pile up all fragments yields similar result
+
+
+biological story
+	People don't care about methods: there are too many methods. It's hard to really claim that the method is dominantly better. People care only the biological story
+
+
+use the real answer to do supervised learning. If the supervised learning is not good, then no need to proceed to the following steps.
+

@@ -1,0 +1,28 @@
+
+matrix
+http://www.stathome.cn/manual/s/03.html
+
+
+read a matrix
+x=read.table(featureX)
+can be delimited by '\t' or ' '
+
+
+write a matrix
+write.table(b,'temp',row.names=FALSE,col.names=FALSE,quote=FALSE,sep='\t')
+
+
+
+subset(a,a[,1]>3,select=1:2)
+only available to columns, after getting the rows, then select some columns from the rows
+
+
+string match
+a %in% b	exact match
+grepl		some characters can't be matched: "$", it should be grepl('\\$',a) instead of grepl('$',a)
+pmatch		prefix
+
+
+
+R for MATLAB users
+http://mathesaurus.sourceforge.net/octave-r.html

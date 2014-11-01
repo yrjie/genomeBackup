@@ -1,0 +1,120 @@
+learn python
+string
+http://www.cnblogs.com/huangcong/archive/2011/08/29/2158268.html
+
+def intersect(a, b):
+
+“”" return the intersection of two lists “”"
+return list(set(a) & set(b))
+
+def union(a, b):
+“”" return the union of two lists “”"
+return list(set(a) | set(b))
+
+def difference(a, b):
+“”" show whats in list b which isn’t in list a “”"
+return list(set(b).difference(set(a)))
+备注:这里应该是list(set(b)-set(a))
+
+
+>>> a = {}
+>>> a['adfaf'] = 1
+>>> a['name'] = "hello"
+>>> print a
+{'adfaf': 1, 'name': 'hello'}
+if '123' in a:
+	print a['123']
+
+
+sort(lambda x,y:-cmp(x.a,y.a))
+cmp should return 1, 0, -1, not ture or false
+
+
+
+numpy
+http://hyry.dip.jp:8000/pydoc/numpy_intro.html
+>>> a = np.arange(0,12,0.5).reshape(4,-1)
+>>> np.savetxt("a.txt", a) # 缺省按照'%.18e'格式保存数据，以空格分隔
+>>> np.loadtxt("a.txt")
+array([[  0. ,   0.5,   1. ,   1.5,   2. ,   2.5],
+       [  3. ,   3.5,   4. ,   4.5,   5. ,   5.5],
+       [  6. ,   6.5,   7. ,   7.5,   8. ,   8.5],
+       [  9. ,   9.5,  10. ,  10.5,  11. ,  11.5]])
+>>> np.savetxt("a.txt", a, fmt="%d", delimiter=",") #改为保存为整数，以逗号分隔
+>>> np.loadtxt("a.txt",delimiter=",") # 读入的时候也需要指定逗号分隔
+array([[  0.,   0.,   1.,   1.,   2.,   2.],
+       [  3.,   3.,   4.,   4.,   5.,   5.],
+       [  6.,   6.,   7.,   7.,   8.,   8.],
+       [  9.,   9.,  10.,  10.,  11.,  11.]])
+a.sum(0)	列求和
+a.sum(1)	行求和
+
+
+matlab对应
+http://wiki.scipy.org/NumPy_for_Matlab_Users
+
+
+
+scipy
+http://www.johndcook.com/blog/2009/07/20/probability-distributions-scipy/
+
+
+
+http://glowingpython.blogspot.sg/2012/03/linear-regression-with-numpy.html
+
+
+
+多模块情况下，使每个模块可以单独运行
+
+
+
+pipe
+from subprocess import *
+import shlex
+cmd=['windowBed','-a',file1,'-b',file2,'-w',sys.argv[1],'-u']
+cmd = 'wc -l test.txt'
+cm = shlex.split(cmd)
+or cm=cmd.split()
+p=Popen(cmd,stdout=PIPE)
+p.stdout.readlines()
+
+
+
+print [x * 2 + 10 for x in foo]
+print [x for x in foo if x % 3 == 0]
+
+
+use python2.7 for fitting
+/home/ruijie/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+diff for tuple & list:
+tuple can't be assigned
+
+
+use scipy.optimize
+set the return of target function to be log([]) -- more robust
+less iterate -> faster
+
+use tempfile
+import tempfile
+tempfile.NamedTemporaryFile(dir=".", delete=False)
+
+import logging
+
+a=[3,12421,52]
+for x,y in enumerate(a):
+	print x,y
+
+
+python install to local
+easy_install --prefix=/home/ruijie/ pylint
+easy_install --prefix=/home/ruijie/ statsmodels
+easy_install --install-dir=/home/ruijie/lib/python2.7/site-packages/ statsmodels
+
+
+if there is a list in the optional parameter, the parameter will keep changing each time the function is called
+def fun1(a=[]):
+     print a
+     a.append(33)
+
+

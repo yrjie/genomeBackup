@@ -1,0 +1,21 @@
+HPC
+http://www.nus.edu.sg/comcen/HPC/index.html
+
+job management
+https://inetapps.nus.edu.sg/comcen/hpc/supportnews/job_monitor.html
+bjobs
+bkill id
+bstop id
+bresume id
+
+
+submit a job
+bsub -q linux64 < myscript
+
+
+Hostname 	Note
+atlas4-c01.nus.edu.sg 	HP Xeon Two Sockets Quad-Core 64-bit Linux cluster, RHEL 4
+atlas4-c81.nus.edu.sg 	HP Xeon Four Sockets Quad-Core 64-bit Linux cluster, RHEL 4
+atlas5-c01.nus.edu.sg 	HP Xeon two sockets Quad-Core 64-bit Linux cluster, RHEL 5
+atlas6-c01.nus.edu.sg 	HP Xeon two sockets Hexa-Core 64-bit Linux cluster, CentOS 5
+atlas7-c01.nus.edu.sg 	HP Xeon four sockets 10-Core and two sockets Hexa-Core 64-bit Linux cluster, CentOS 5

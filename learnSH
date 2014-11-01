@@ -1,0 +1,70 @@
+awk '{OFS="\t";print NR,$1}' $file >temp	without BEGIN is ok
+grep DNase_Strand1 userdata/guest.172.26.186.111/*/input/jobtype|awk 'BEGIN {FS=":"} {print $1}'	without BEGIN, the first line will have problem
+
+BEGIN 表示在处理任意行之前进行的操作。
+
+awk 'BEGIN {print $1}' library.lst	output nothing
+gsub("ab","cd", $1)	ab->cd in $1
+match(s,"af")		"af" in s
+split(s, a, ";")	split s by ";" and store the result in a, return len
+awk '$1 ~/[0-9][0-9]$/{print $1}' test	match two numbers at the tail
+
+
+ls {outputdir}/*pos.same|xargs -n1 sh -c '/home/chipseq/public_html/webseqtools2/PROG/pomoscan/Pos2Bed.py {fastafile} {peakfile} $0 {outputdir}/matlist.txt
+
+a=G7_FAIRE_POOL_filt_counts_clip.bw
+echo ${a%%_*}	#G7
+echo ${a%_*}	#G7_FAIRE_POOL_filt_counts
+echo ${a##*_}	#clip.bw
+echo ${a#*_}	#FAIRE_POOL_filt_counts_clip.bw
+${变量/查找/替换值} 一个“/”表示替换第一个，”//”表示替换所有,
+
+
+
+xargs sh -c : if " is used, then need to use -I to get the par
+	in this case, the '$' in awk should be written as '\$'
+	ex, 
+	ls ../data/Gm12878Egr1_Fclust*.bed|xargs -n1 -I xx sh -c "echo xx; closestBed -a xx -b ../data/knownGene.bed -t first -d|awk '{if (NR==1) print NF, \$NF}'"
+	ex, xargs -n1 -I xx sh -c "echo xx"
+-I: the xx is appended to echo directly, like echo >111 will generate the file "111"
+sh -c: $0 is used as a string
+
+
+language
+export LANG="zh_CN.GBK"
+export LANG="en_US.UTF-8"
+
+
+vim
+When searching: \n is newline, \r is CR (carriage return = Ctrl-M = ^M)
+When replacing: \r is newline, \n is a null byte (0×00).
+
+echo "456qwe789lmn"|grep -Po '(?<=\d)\D+(?=\d)'
+a(?=b) 匹配后面紧跟为b的a,
+a(?!b) 匹配后面不为b的a
+(?<=c)a 匹配前面为c的a
+(?<!c)a 匹配前面不为c的a
+
+
+scanner: simplescan
+
+
+htop bug
+htop 1.0.1 aborting. Please report bug at http://htop.sf.net
+Backtrace: 
+htop[0x407d3f]
+/lib64/libc.so.6[0x38a60329a0]
+htop(main+0x998)[0x409de8]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x38a601ed1d]
+htop[0x404f89]
+Aborted (core dumped)
+
+
+when sortting by string, use 'LC_ALL=C sort temp.txt'
+
+tr -s 'abc' '\t'
+transliterate all 'abc' into '\t', if multiple consecutive happens, just replace by one '\t'
+
+
+a=("321" "33 da" "aaa aa")
+need to use for ((i = 0; i < ${#a[@]}; i++))

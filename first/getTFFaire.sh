@@ -1,0 +1,1 @@
+closestBed -a data/Gm12878Egr1_c1.bed -b ~/DNase/Faire/wgEncodeOpenChromFaireGm12878Pk.narrowPeak -t first -d |awk 'BEGIN {ans=0} {if ($15==0) {print $5":"$6-1000"-"$7+1000,($14-($7-$6)/2)}}'|sort -k2 -gr|less

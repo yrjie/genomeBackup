@@ -1,0 +1,22 @@
+ignore
+svn propset svn:ignore *.png .
+
+
+commit from an old version
+http://www.panweizeng.com/svn-branching-merging.html
+http://www.cnblogs.com/huang0925/p/3254243.html
+1. svn copy -- to a new branch
+	svn copy https://webseqtools2.googlecode.com/svn/trunk/ https://webseqtools2.googlecode.com/svn/branches/biogpu -m ''
+
+2. checkout the branch and commit under the branch dir
+	svn co branch
+	svn ci
+
+3. merge the branch to the trunk under the trunk dir
+	svn merge https://webseqtools2.googlecode.com/svn/branches/biogpu
+
+4. svn commit in the trunk dir
+
+
+
+!! add the new files when they are created

@@ -1,0 +1,19 @@
+Gtk-WARNING **: cannot open display: 
+	unset SSH_ASKPASS
+
+403 Forbidden
+	.git/config
+	url = https://yrjie@github.com/yrjie/import-data.git
+
+
+
+initialize from the web
+$ rm -fr .git
+$ git init
+$ git remote add origin your-git-url
+$ git fetch
+$ git reset --hard origin/master
+
+
+cannot open display
+	unset SSH_ASKPASS

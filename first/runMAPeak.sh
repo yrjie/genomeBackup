@@ -1,0 +1,1 @@
+python getMAPeak.py MAnorm_Linux_R_Package/MAnorm_result.xls microarray_folder/affyU133P2.xls microarray_folder/JARID_microarray.txt

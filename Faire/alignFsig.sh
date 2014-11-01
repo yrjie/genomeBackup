@@ -1,0 +1,1 @@
+paste temp Gm12878Gene_sorted.sig |awk 'BEGIN{OFS="\t"}{if (NR%50==0){printf $1; if ($1=="+"){for (i=2;i<=NF;i++) printf "\t"log($i+0.1);} else {for (i=NF;i>=2;i--) printf "\t"log($i+0.1);} printf "\n"}}' >temp.dat

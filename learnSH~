@@ -1,0 +1,6 @@
+awk '{OFS="\t";print NR,$1}' $file >temp	without BEGIN is ok
+grep DNase_Strand1 userdata/guest.172.26.186.111/*/input/jobtype|awk 'BEGIN {FS=":"} {print $1}'	without BEGIN, the first line will have problem
+
+ls {outputdir}/*pos.same|xargs -n1 sh -c '/home/chipseq/public_html/webseqtools2/PROG/pomoscan/Pos2Bed.py {fastafile} {peakfile} $0 {outputdir}/matlist.txt
+
+

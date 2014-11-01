@@ -1,0 +1,1 @@
+java -Djava.awt.headless=false -cp "bin:lib/*" PeakClassifier -dataDir /home/ruijie/ELL3/comparePol2/bw/ -print -sumNorm -medianNorm -sort -winsize 500 -clusterfeatures mux1007 -clusternum 5 -peakfile1 $*
