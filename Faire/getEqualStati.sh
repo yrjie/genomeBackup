@@ -16,6 +16,9 @@ split -l$one $1 splited
 tmpRead=temp$RANDOM.bed
 tmpSuffix=tmp$RANDOM
 tmpPk=pilePeak$tmpSuffix.bed
+tmpShuf=shuf$RANDOM.bed
+
+shuffleBed -i $2 -g ~/genome/human.hg19.genome >$tmpShuf
 
 for i in ${suffix[*]}
 do
@@ -31,14 +34,15 @@ do
 #	tmpSuffix=splitNoM$i"_"$j
 #	tmpPk=equalSplit/pilePeak$tmpSuffix.bed
     	sh callPileUp.sh $tmpRead $j $tmpSuffix
-	m=`wc -l $tmpPk|cut -d' ' -f1`
-	n=`windowBed -a $tmpPk -b $2 -u -w 0|wc -l`
-#	n=`windowBed -b $tmpPk -a $2 -u -w 0|wc -l`
+#	m=`wc -l $tmpPk|cut -d' ' -f1`
+#	n=`windowBed -a $tmpPk -b $2 -u -w 0|wc -l`
+	n=`windowBed -b $tmpPk -a $2 -u -w 0|wc -l`
 #	n=`windowBed -a pilePeaktmp.bed -b ../allGm12878TFrmdup.bed -u -w 0|wc -l`
+	m=`windowBed -b $tmpPk -a $tmpShuf -u -w 0|wc -l`
+#	echo $n $m
 	echo $n/$m'('`echo $n/$m|bc -l`')'
 #	echo $n
     done
 done
-rm $tmpRead
-rm $tmpPk
+rm $tmpRead $tmpPk $tmpShuf
 rm spliteda*

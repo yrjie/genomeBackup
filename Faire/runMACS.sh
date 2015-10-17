@@ -1,1 +1,7 @@
-macs14 -t ../DNase/bam/Faire/wgEncodeOpenChromFaireH1hescAlnRep1.bam -f auto -n ./FaireH1hescM -p 0.005
+if [ $# -lt 2 ]
+then
+    echo 'Usage: bedfile jobname'
+    exit
+fi
+
+macs14 -t $1 -f auto -n ./$2 -p 0.005

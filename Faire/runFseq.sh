@@ -1,6 +1,6 @@
 if [ $# -lt 2 ]
 then
-    echo 'Usage: bedfile prefix'
+    echo 'Usage: bedfile outfile'
     exit
 fi
 
@@ -17,5 +17,5 @@ fi
 ~/bin/fseq/bin/fseq -l 800 -v -b ../bff_35/ -of npf $1
 #~/bin/fseq/bin/fseq -l 800 -v -b ../bff_35/ -f 0 -of npf $1
 #~/bin/fseq/bin/fseq -l 800 -v -of npf $1
-cat *.npf >$2.bed
+cat *.npf >$2
 rm *.npf

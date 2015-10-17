@@ -15,8 +15,8 @@ one=`echo $num/10 |bc`
 echo $cell$suffix.tab
 #max1=10000 # for ATAC under DFilter
 #max1=20000 # for ATAC
-max1=50000 # for ATAC_low
-#max1=100000 # for Faire
+#max1=50000 # for ATAC_low
+max1=100000 # for Faire
 #max1=200000 # for Faire
 
 #if [ $max1 -lt $one ]
@@ -26,6 +26,7 @@ max1=50000 # for ATAC_low
 sortFile=sorted$RANDOM
 # be careful about the column of score
 sort -k4 -gr $file >$sortFile
+#cp $file $sortFile
 numP=`windowBed -a $sortFile -b $TFfile -u -w 0 |wc -l`
 numN=`windowBed -a $sortFile -b $TFfile -v -w 0 |wc -l`
 for ((i=1;i<=10;i++)) do

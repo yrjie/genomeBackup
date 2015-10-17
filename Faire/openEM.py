@@ -63,7 +63,7 @@ def readFile(infile, allPeak):
         if len(line)<1:
             continue
         temp=line.split('\t')
-        fragLen=int(temp[8])
+        fragLen=int(temp[-2])
         if fragLen<0:
             fragLen=-fragLen
         id='\t'.join([temp[0],temp[1],temp[2]])
